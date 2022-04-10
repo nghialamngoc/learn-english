@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'FSElliotPro';
+  src: url(./assets/font/FSElliotPro.woff);
+}
+
+@font-face {
+  font-family: 'FSElliotPro';
+  font-weight: 700;
+  src: url(./assets/font/FSElliotProHeavy.woff);
+}
+
+@font-face {
+  font-family: 'FSElliotPro';
+  font-weight: 500;
+  src: url(./assets/font/FSElliotProBold.woff);
+}
+
+@font-face {
+  font-family: 'FSElliotPro';
+  font-weight: 300;
+  src: url(./assets/font/FSElliotProLight.woff);
+}
+
+body {
+  margin: 0;
+  font-family: 'FSElliotPro', sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+}
+
+.header {
+  flex-shrink: 0;
+}
+
+.content {
+  flex-grow: 1;
+}
