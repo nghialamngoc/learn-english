@@ -1,5 +1,6 @@
 import { ChatIcon, CopyIcon, HamburgerIcon } from '@chakra-ui/icons';
-import { Box, Divider, Flex, Tooltip } from '@chakra-ui/react';
+import { Box, Divider, Flex, Tooltip, useMediaQuery } from '@chakra-ui/react';
+
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import styles from './AppHeader.module.scss';
@@ -8,6 +9,7 @@ export interface AppHeaderProps {}
 
 export default function AppHeader(props: AppHeaderProps) {
   const [isCollapse, setIsCollapse] = useState(false);
+  const [isTablet] = useMediaQuery('(min-width: 768px)');
 
   const [menuTop] = useState([
     {
@@ -21,6 +23,10 @@ export default function AppHeader(props: AppHeaderProps) {
       link: '/grammars',
     },
   ]);
+
+  if (!isTablet) {
+    return <></>;
+  }
 
   return (
     <Box

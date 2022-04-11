@@ -2,7 +2,6 @@ import AppHeader from 'components/common/AppHeader/Header';
 import Dashboard from 'features/Dashboard';
 import Grammars from 'features/Grammars';
 import Vocabularies from 'features/Vocabularies';
-import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 
@@ -21,10 +20,7 @@ function App() {
             path="/vocabularies"
             element={<Vocabularies></Vocabularies>}
           ></Route>
-          <Route
-            path="/grammars"
-            element={<Grammars></Grammars>}
-          ></Route>
+          <Route path="/grammars" element={<Grammars></Grammars>}></Route>
           {/* <Route path="/login" element={<LoginPage></LoginPage>}></Route> */}
           {/* <Route
           path="/admin"
